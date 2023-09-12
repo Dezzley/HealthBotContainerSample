@@ -4,7 +4,7 @@ function assignEventToButton() {
     const button = document.getElementById('medical-chat-button');
     const webchat = document.getElementById('webchat');
     button.addEventListener('click', () => {
-        if (webchat.style.display === 'none') {
+        if (webchat.style.display === 'none' || !webchat.style.display) {
             webchat.style.display = 'block';
         } else {
             webchat.style.display = 'none';
@@ -129,16 +129,9 @@ function initBotConversation() {
                                     jsonWebToken: jsonWebToken,
 
                                     // Use the following activity to proactively invoke a bot scenario
-                                    /*
                                     triggeredScenario: {
-                                        trigger: "{scenario_id}",
-                                        args: {
-                                            location: location,
-                                            myVar1: "{custom_arg_1}",
-                                            myVar2: "{custom_arg_2}"
-                                        }
+                                        trigger: "12345"
                                     }
-                                    */
                                 }
                             }
                         }
