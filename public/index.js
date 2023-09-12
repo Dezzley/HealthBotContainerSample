@@ -167,4 +167,7 @@ function initBotConversation() {
 function startChat(user, webchatOptions) {
     const botContainer = document.getElementById('webchat');
     window.WebChat.renderWebChat(webchatOptions, botContainer);
+
+    const inputElement = document.querySelector('.webchat__send-box-text-box__input');
+    inputElement.setAttribute('placeholder', 'הזינו שאלה'); 
 }
