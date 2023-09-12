@@ -4,7 +4,6 @@ function assignEventToButton() {
     const button = document.getElementById('medical-chat-button');
     const webchat = document.getElementById('webchat');
     button.addEventListener('click', () => {
-        console.log(`Hello world ${webchat.style.display}`)
         if (webchat.style.display === 'none') {
             webchat.style.display = 'block';
         } else {
